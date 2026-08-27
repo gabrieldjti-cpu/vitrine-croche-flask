@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titulo %}Vitrine de Crochê{% endblock %}
+
+{% block conteudo %}
+    <header>
+        <h1>Vitrine de Artesanato em Crochê</h1>
+        <p>Peças artesanais feitas à mão com carinho.</p>
+    </header>
+
+    <section>
+        <h2>Nossos produtos</h2>
+
+        {% if produtos %}
+            {% for produto in produtos %}
+                <article>
+                    <h3>{{ produto.nome }}</h3>
+                    <p>{{ produto.descricao }}</p>
+                    <p><strong>Preço:</strong> R$ {{ "%.2f"|format(produto.preco) }}</p>
+
+                    {% if produto.disponivel %}
+                        <p><strong>Disponível</strong></p>
+                    {% else %}
+                        <p><strong>Produto indisponível</strong></p>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma peça de crochê cadastrada no momento.</p>
+        {% endif %}
+    </section>
+{% endblock %}
