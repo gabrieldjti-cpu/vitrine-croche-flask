@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block titulo %}Perfil de {{ nome }}{% endblock %}
+
+{% block conteudo %}
+    <h1>Perfil de {{ nome }}</h1>
+    <p>{{ nome }} tem {{ idade }} anos.</p>
+    {% if curso %}
+        <p>Curso: {{ curso }}</p>
+    {% endif %}
+{% endblock %}
