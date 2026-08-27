@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Cartão de Visita{% endblock %} — Wilson Oliveira</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/hobbies">Hobbies</a>
+        <a href="/futuro">Futuro</a>
+        <a href="/contato">Contato</a>
+        <a href="/produto">Produto</a>
+        <a href="/vitrine">Vitrine</a>
+    </nav>
+
+    <main>
+        {% block conteudo %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Cartão de visita &mdash; Módulo 3 &mdash; Programação para Internet</p>
+    </footer>
+</body>
+</html>
